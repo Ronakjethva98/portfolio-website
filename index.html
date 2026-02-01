@@ -36,8 +36,13 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
+            <div class="nav-right">
+                <div class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </div>
     </nav>
@@ -61,7 +66,7 @@
             </div>
             <div class="hero-image" data-aos="fade-left">
                 <div class="glass-card main-img-container">
-                    <img src="profile.jpg" alt="Ronak" class="profile-img">
+                    <img src="profile_v2.png" alt="Ronak" class="profile-img">
                 </div>
             </div>
         </div>
@@ -167,8 +172,8 @@
                 <!-- Project 1 -->
                 <div class="project-card" data-aos="fade-up">
                     <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
-                            alt="Project 1">
+                        <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=2070&auto=format&fit=crop"
+                            alt="Shopease E-Commerce">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="#"><i class="fas fa-link"></i></a>
@@ -177,20 +182,23 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h4>E-Commerce Platform</h4>
-                        <p>A full-featured online store with checkout and user dashboard.</p>
+                        <h4>Shopease E-Commerce</h4>
+                        <p>A premium e-commerce platform with a modern UI, featuring product collections and a seamless
+                            shopping experience.</p>
                         <div class="tags">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
+                            <span>Python</span>
+                            <span>MySQL</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
                         </div>
                     </div>
                 </div>
                 <!-- Project 2 -->
                 <div class="project-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
-                            alt="Project 2">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
+                            alt="Business Listing Site">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="#"><i class="fas fa-link"></i></a>
@@ -199,12 +207,13 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h4>SaaS Dashboard</h4>
-                        <p>Real-time analytics dashboard with interactive charts and reports.</p>
+                        <h4>Business Listing Directory</h4>
+                        <p>A comprehensive business platform with admin panels, inquiry management, and an integrated
+                            advertisement system.</p>
                         <div class="tags">
-                            <span>Vue.js</span>
-                            <span>D3.js</span>
-                            <span>Firebase</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>Bootstrap</span>
                         </div>
                     </div>
                 </div>
@@ -212,7 +221,7 @@
                 <div class="project-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="project-img">
                         <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop"
-                            alt="Project 3">
+                            alt="Developer Portfolio">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="#"><i class="fas fa-link"></i></a>
@@ -221,12 +230,13 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h4>Developer Portfolio</h4>
-                        <p>A premium portfolio template with glassmorphism and animations.</p>
+                        <h4>Premium Portfolio</h4>
+                        <p>A high-end developer portfolio showcasing projects with glassmorphism and advanced CSS
+                            animations.</p>
                         <div class="tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JS</span>
+                            <span>Modern CSS</span>
+                            <span>AOS.js</span>
+                            <span>Responsive</span>
                         </div>
                     </div>
                 </div>
@@ -247,14 +257,14 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h4>Email</h4>
-                            <p>hello@example.com</p>
+                            <p><a href="mailto:jethvaronak98@gmail.com">jethvaronak98@gmail.com</a></p>
                         </div>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-phone"></i>
                         <div>
                             <h4>Phone</h4>
-                            <p>+1 (234) 567-890</p>
+                            <p><a href="tel:+919327060890">+91 9327060890</a></p>
                         </div>
                     </div>
                     <div class="social-links">
@@ -264,15 +274,15 @@
                         <a href="#"><i class="fab fa-behance"></i></a>
                     </div>
                 </div>
-                <form class="contact-form glass-card">
+                <form action="https://formspree.io/f/xjknqpzq" method="POST" class="contact-form glass-card">
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" name="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
