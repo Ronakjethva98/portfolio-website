@@ -187,7 +187,7 @@ export default function App() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="absolute top-20 left-0 w-full glass-card border-t-0 flex flex-col items-center py-8 gap-6 md:hidden shadow-2xl overflow-hidden"
+              className="absolute top-20 left-0 w-full bg-[#030712]/95 backdrop-blur-3xl border-b border-white/10 flex flex-col items-center py-8 gap-6 md:hidden shadow-2xl overflow-hidden"
             >
               <a href="#services" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-white hover:text-cyan-400">Featured Work</a>
               <a href="#expertise" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-white hover:text-cyan-400">Expertise</a>
