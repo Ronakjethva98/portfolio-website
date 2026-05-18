@@ -313,7 +313,7 @@ export default function App() {
             <a href="mailto:ronakjethva98@gmail.com" className="glow-button px-10 py-4 rounded-full font-bold text-sm uppercase tracking-wider inline-flex items-center gap-2 relative z-10">
               Get In Touch <ArrowUpRight className="w-5 h-5" />
             </a>
-          </div>
+          </motion.div>
         </section>
 
       </main>
