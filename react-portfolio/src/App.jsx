@@ -67,9 +67,16 @@ const EagleCard = ({ children, className, mouseX, mouseY }) => {
   const borderBackground = useMotionTemplate`radial-gradient(500px circle at ${relativeX}px ${relativeY}px, rgba(34,211,238,0.4), transparent 40%)`;
 
   return (
-    <div ref={ref} className={`relative rounded-3xl glass-card overflow-hidden group transition-all duration-500 hover:shadow-[0_8px_30px_rgb(34,211,238,0.12)] ${className}`}>
+    <motion.div 
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.7 }}
+      ref={ref} 
+      className={`relative rounded-3xl glass-card overflow-hidden group transition-all duration-500 hover:shadow-[0_8px_30px_rgb(34,211,238,0.12)] ${className}`}
+    >
       <motion.div
-        className="pointer-events-none absolute inset-0 z-20 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        className="pointer-events-none absolute inset-0 z-20 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 hidden md:block"
         style={{ background: borderBackground, padding: '1px', WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)', WebkitMaskComposite: 'xor', maskComposite: 'exclude' }}
       >
         <div className="w-full h-full rounded-3xl bg-[#030712]" />
@@ -77,7 +84,7 @@ const EagleCard = ({ children, className, mouseX, mouseY }) => {
       <div className="relative z-30 h-full">
         {children}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -275,18 +282,31 @@ export default function App() {
               { step: "02", title: "Backend Architecture", desc: "Developing secure and scalable server-side systems using Node.js, Python Flask, and PHP." },
               { step: "03", title: "Database & Systems", desc: "Designing optimized data schemas and managing complex relationships with MySQL and modern ORMs." }
             ].map((p, i) => (
-              <div key={i} className="glass-card p-8 rounded-2xl border-t border-cyan-500/30 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-shadow">
+              <motion.div 
+                key={i} 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: i * 0.15 }}
+                className="glass-card p-8 rounded-2xl border-t border-cyan-500/30 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-shadow"
+              >
                 <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-b from-cyan-400 to-indigo-500/10 mb-4">{p.step}</div>
                 <h3 className="text-xl font-bold text-white mb-3">{p.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{p.desc}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </section>
 
         {/* Contact Section */}
         <section id="contact" className="container mx-auto px-6 py-20 mb-20 relative z-10">
-          <div className="glass-card max-w-4xl mx-auto rounded-3xl p-10 md:p-16 text-center border border-cyan-500/20 shadow-[0_0_50px_rgba(99,102,241,0.1)] relative overflow-hidden">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+            className="glass-card max-w-4xl mx-auto rounded-3xl p-10 md:p-16 text-center border border-cyan-500/20 shadow-[0_0_50px_rgba(99,102,241,0.1)] relative overflow-hidden"
+          >
             <div className="absolute top-[-50%] left-[20%] w-[300px] h-[300px] bg-cyan-500/20 blur-[100px] rounded-full pointer-events-none" />
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 relative z-10">Ready to start your <br/><span className="text-gradient-cyan">next project?</span></h2>
             <p className="text-gray-400 mb-10 max-w-lg mx-auto relative z-10">Let's build something extraordinary together. Reach out today to discuss your vision.</p>
